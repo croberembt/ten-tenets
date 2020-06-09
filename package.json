@@ -1,5 +1,5 @@
 {
-  "name": "ten-tenants",
+  "name": "ten-tenets",
   "version": "1.0.0",
   "description": "This is my portfolio project for Nucamp Minneapolis, a gamification of goals website (and eventual application).",
   "main": "index.html",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/croberembt/ten-tenants.git"
+    "url": "git+https://github.com/croberembt/ten-tenets.git"
   },
   "author": "Calli R. Oberembt",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/croberembt/ten-tenants/issues"
+    "url": "https://github.com/croberembt/ten-tenets/issues"
   },
-  "homepage": "https://github.com/croberembt/ten-tenants#readme",
+  "homepage": "https://github.com/croberembt/ten-tenets#readme",
   "devDependencies": {
     "lite-server": "^2.3.0"
   },
