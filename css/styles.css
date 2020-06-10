@@ -3,14 +3,19 @@ html, body {
 }   
     
 .bg {
-    background-image: url("https://pixabay.com/get/57e8d34b4253ab14f6d1867dda293177103ddce5574c704c7c2e7cd6914ac25d_1920.jpg");
+    background-image: url("https://pixabay.com/get/57e8d34b4253ab14f6d1867dda293177103ddce5574c704c7c2e73d5944bc251_1920.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-#navLogo{
+#navLogo {
     width: 50px;
     height: 50px;
+}
+
+#loginText {
+    margin-right: 50px;
+    margin-top: 15px;
 }
