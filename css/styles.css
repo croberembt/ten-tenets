@@ -1,14 +1,6 @@
-html, body {
-    height: 100%;
-}   
-    
-.bg {
-    background-image: url("https://pixabay.com/get/57e8d34b4253ab14f6d1867dda293177103ddce5574c704c7c2e73d5944bc251_1920.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+body {
+    background-color: black;
+}
 
 #navLogo {
     width: 50px;
@@ -18,4 +10,20 @@ html, body {
 #loginText {
     margin-right: 50px;
     margin-top: 15px;
+}
+
+#copyright {
+    color: white;
+    margin-left: 15px;
+    padding-top: 20px;
+}
+
+#profile {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.progress {
+    margin-top: 50px;
 }
