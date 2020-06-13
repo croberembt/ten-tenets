@@ -2,14 +2,25 @@ body {
     background-color: black;
 }
 
-#navLogo {
+
+#navLogoTop {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px
+}
+
+#jumbotronText {
+    margin-top: 30px;
+}
+
+#navLogoBottom {
     width: 50px;
     height: 50px;
 }
 
 #loginText {
     margin-right: 50px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 #copyright {
@@ -22,8 +33,75 @@ body {
     width: 100px;
     height: 100px;
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .progress {
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#main {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+#thisWeek {
+    margin-top: 30px;
+}
+
+#facebook {
+    margin-right: 30px;
+    margin-top: 200px;
+}
+
+#instagram {
+    margin-right: 30px;
+    margin-top: 200px;
+}
+
+#twitter {
+    margin-top: 200px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+  
+.carousel {
+    border: solid white; 
+}
+  
+#carouselControl {
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+}
+
+#inspiration {
+    color: green;
+    font-weight: bold;
+
+}
+
+#loginButton {
+    color: green;
+    cursor: pointer;
+}
+
+#signUp {
+    margin: 10px;
+}
+
+#cancel {
+    margin: 10px;
+}
+
+#signIn {
+    margin: 10px; 
+}
+
+.jumbotron {
+    background-color: darkgray;
+    color: white;
 }

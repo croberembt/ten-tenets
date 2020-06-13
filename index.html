@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     <title>Ten Tenets for a Happier Life</title>
 </head>
@@ -23,6 +23,20 @@
 <body>
 
     <header>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row row-content">
+                    <div class="col-sm-6 text-center">
+                        <h1 id="jumbotronText">Ten Tenets for a Happier Life</h1>
+                    </div>
+                    <div class="col">
+                        <a class="navbar-brand d-flex justify-content-center" href="#">
+                            <img id="navLogoTop" src="images/logo.png" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <nav class="navbar navbar-expand-sm navbar-dark sticky top">
             <div class="container">
                 <ul class="navbar-nav">
@@ -30,7 +44,7 @@
                         <a class="nav-link" href="#">GAME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">ABOUT</a>
+                        <a class="nav-link" href="about.html">HOW TO PLAY</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">CONTACT</a>
@@ -42,27 +56,118 @@
                             <i class="fa fa-sign-in"></i> LOGIN
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand" href="#">
-                            <img id="navLogo" src="images/logo.png" class="img-fluid">
-                        </a>
-                    </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <div class="container">
-        <div class="row row-content">
-            <div class="col-md-6">
-                <img id="profile" class="d-flex img-fluid" src="images/profile.png" alt="my profile" />
-            </div>
-            <div class="col">
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                      <span class="sr-only">70% Complete</span>
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Welcome to a Happier Life</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginEmail">Email</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label">Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button id="signUp" class="btn btn-primary btn-sm">Sign Up</button>
+                                <button id="cancel" type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                                <button id="signIn" type="submit" class="btn btn-success btn-sm">Sign In</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main" class="container">
+
+        <div class="row row-content">
+            <div class="col-md-6 d-flex justify-content-center">
+                <a href="#"><img id="profile" class="d-flex img-fluid" src="https://pixabay.com/get/57e8d7474b56a814f6da8c7dda293177103ddce5574c704c7c2e72dd9e49cd59_1280.png" alt="my profile" /></a>
+            </div>
+            <div class="col">
+                <ul class="list-unstyled">
+                    <li id="thisWeek" class="d-flex justify-content-center">THIS WEEK'S PROGRESS</li>
+                    <li>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                <span class="sr-only">70% Complete</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row row-content">
+            <div class="col-md-6 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                    <li>
+                        <h3>GOAL ONE</h3>
+                        <p>Please set your goal in the following category: </p>
+                    </li>
+                    <li>
+                        <h3>GOAL TWO</h3>
+                        <p>Please set your goal in the following category: </p>
+                    </li>
+                    <li>
+                        <h3>GOAL THREE</h3>
+                        <p>Please set your goal in the following category: </p>
+                    </li>
+                    <li>
+                        <h3>GOAL FOUR</h3>
+                        <p>Please set your goal in the following category: </p>
+                    </li>
+                    <li>
+                        <h3>GOAL FIVE</h3>
+                        <p>Please set your goal in the following category: </p>
+                    </li>
+                    <li>
+                        <h3>GOAL SIX</h3>
+                        <p>Please set your goal in the following category: </p>
+                    </li>
+                    <li>
+                        <h3>GOAL SEVEN</h3>
+                        <p>Please set your goal in the following category: </p>
+                    </li>
+                    <li>
+                        <h3>GOAL EIGHT</h3>
+                        <p>Please set your goal in the following category: </p>
+                    </li>
+                    <li>
+                        <h3>GOAL NINE</h3>
+                        <p>Please set your goal in the following category: </p>
+                    </li>
+                    <li>
+                        <h3>GOAL TEN</h3>
+                        <p>Please set your goal in the following category: </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <a target="_blank" id="facebook" class="btn btn-social-icon btn-lg btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a target="_blank" id="instagram" class="btn btn-social-icon btn-lg btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                <a target="_blank" id="twitter" class="btn btn-social-icon btn-lg btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
             </div>
         </div>
     </div>
@@ -75,7 +180,7 @@
                         <a class="nav-link" href="#">GAME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">ABOUT</a>
+                        <a class="nav-link" href="about.html">HOW TO PLAY</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">CONTACT</a>
@@ -84,7 +189,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="navbar-brand" href="#">
-                            <img id="navLogo" src="images/logo.png" class="img-fluid">
+                            <img id="navLogoBottom" src="images/logo.png" class="img-fluid">
                         </a>
                     </li>
                     <li class="nav-text">
@@ -95,8 +200,6 @@
         </nav>
     </footer>
 
-
-
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
@@ -104,7 +207,6 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
  
-
 </body>
 
 </html>

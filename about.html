@@ -15,77 +15,131 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     <title>Ten Tenets for a Happier Life</title>
 </head>
 
 <body>
 
-    <div class="bg">
-
-        <header>
-            <nav class="navbar navbar-expand-sm navbar-light sticky top">
-                <div class="container">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">GAME</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">ABOUT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">CONTACT</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-text" id="loginText">
-                            <a role="button" id="loginButton">
-                                <i class="fa fa-sign-in"></i> LOGIN
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="navbar-brand" href="index.html">
-                                <img id="navLogo" src="images/logo.png" class="img-fluid">
-                            </a>
-                        </li>
-                    </ul>
-            </nav>
-        </header>
-
-        <div class="container">
-            <p>ABOUT PARAGRAPH GOES HERE</p>
-        </div>
-
-        <footer class="site-footer">
-            <nav class="navbar navbar-expand navbar-dark d-none d-md-block">
-                <div class="container">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">GAME</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">ABOUT</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">CONTACT</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="navbar-brand" href="index.html">
-                                <img id="navLogo" src="images/logo.png" class="img-fluid">
-                            </a>
-                        </li>
-                        <li class="nav-text">
-                            <p id="copyright">&copy 2020 Oberembt</p>
-                        </li>
-                    </ul>
+    <header>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row row-content">
+                    <div class="col-sm-6 text-center">
+                        <h1 id="jumbotronText">Ten Tenets for a Happier Life</h1>
+                    </div>
+                    <div class="col">
+                        <a class="navbar-brand d-flex justify-content-center" href="#">
+                            <img id="navLogoTop" src="images/logo.png" class="img-fluid">
+                        </a>
+                    </div>
                 </div>
-            </nav>
-        </footer>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-dark sticky top">
+            <div class="container">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">GAME</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">HOW TO PLAY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
+        </nav>
+    </header>
 
+    <div id="main" class="container">
+        <div class = "row row-content">
+            <div class="col">
+                <div id="howtoCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#howtoCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#howtoCarousel" data-slide-to="1"></li>
+                        <li data-target="#howtoCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="img-fluid" src="https://pixabay.com/get/57e2d54a4950ad14f6d1867dda293177103ddce5574c704c7c2e72dd924ac55e_1920.jpg" alt="two friends talking" />  
+                            <div class="carousel-caption">
+                                <h3>SET YOUR WEEKLY GOALS</h3>
+                                <ul class="list-unstyled">
+                                    <li>Set your weekly goals under the happiness categories.</li>
+                                    <li>Start as small as you want or challenge yourself with stretch goals.</li>
+                                    <li>See our <a id="inspiration" href="#">inspiration</a> page for ideas to get you going.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="https://pixabay.com/get/54e4d7464b50ad14f6d1867dda293177103ddce5574c704c7c2e72dd924fc750_1920.jpg" alt="happy couple and dog" />
+                            <div class="carousel-caption">
+                                <h3>GET TO WORK</h3>
+                                <ul class="list-unstyled">
+                                    <li>Complete your goals at your own pace.</li>
+                                    <li>Check your goals off as you go or update weekly.</li>
+                                    <li>Check the progress bar to make sure you are pacing to hit all of your goals for the week.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="https://pixabay.com/get/54e6d3444e57a914f6d1867dda293177103ddce5574c704c7c2d7bd49f48c25d_1920.jpg" alt="person looking up at sky" />
+                            <div class="carousel-caption">
+                                <h3>SHARE AND EARN POINTS</h3>
+                                <ul class="list-unstyled">
+                                    <li>Post photos of your accomplishments to social media with the hashtag #ten-happiness-tenants.</li>
+                                    <li>Get inspired by the #ten-happiness-tenants community and encourage others with reactions and comments.</li>
+                                    <li>Take credit for all of your hard work and level up in the game and in life.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#howtoCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#howtoCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <button class="btn btn-success btn-sm" id="carouselControl">
+                        <i class="fa fa-pause"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <footer class="site-footer">
+        <nav class="navbar navbar-expand navbar-dark d-none d-md-block">
+            <div class="container">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">GAME</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">HOW TO PLAY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="index.html">
+                            <img id="navLogoBottom" src="images/logo.png" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="nav-text">
+                        <p id="copyright">&copy 2020 Oberembt</p>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </footer>
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     
