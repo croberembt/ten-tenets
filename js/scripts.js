@@ -28,80 +28,103 @@ $(function() {
 
 // variables
 
-const CHECK = 'fa-check-circle';
-const UNCHECK = 'fa-circle-thin';
-const LINE_THROUGH = 'lineThrough';
-
-const clear = document.querySelector('.clear');
-const list = document.getElementById('goalList');
-const input = document.getElementById('input');
-
 let GOALLIST = [];
 
 let id = 0;
 
-GOALLIST = [{} ,{} , ...];
+// select elements
 
-GOALLIST[0] ->
+const clear = document.querySelector('.clear');
+const list = document.getElementById('goalList');
+const input = document.getElementById('input1');
+const deleteGoal = document.getElementsByClassName('deleteIcon');
 
-{
-    name: 'Sleep at least 8 hours every night',
-    id: 0,
-    done: false,
-    trash: false
-}
+// class names
 
-GOALLIST[1] ->
+const check = 'fa-check-circle goalComplete';
+const uncheck = 'fa-circle-thin';
+const line = 'goalLine'; 
+const noline = ''; 
 
-{
-    name: 'Eat at least one serving of vegetables every day',
-    id: 0,
-    done: false,
-    trash: false
-}
 
-localStorage.setItem('key', 'value');
 
-let data = localStorage.getItem('TODO');
 
-localStorage.setItem('TODO', JSON.stringify(GOALLIST)); 
 
-if (data) {
-    GOALLIST = JSON.parse(data);
-    loadGoalList(GOALLIST);
-    id = GOALLIST.length;
-} else {
-    LIST = [];
-    id = 0; 
-}
+// GOALLIST = [{} ,{} , ...];
+
+//GOALLIST[0] ->
+
+//{
+    //name: 'Sleep at least 8 hours every night',
+    //id: 0,
+   //done: false,
+    //trash: false
+//}
+
+//GOALLIST[1] ->
+
+//{
+    //name: 'Eat at least one serving of vegetables every day',
+    //id: 0,
+    //done: false,
+    //trash: false
+//}
+
+// localStorage.setItem('key', 'value');
+
+//let data = localStorage.getItem('TODO');
+
+//localStorage.setItem('TODO', JSON.stringify(GOALLIST)); 
+
+//if (data) {
+    //GOALLIST = JSON.parse(data);
+    //loadGoalList(GOALLIST);
+    //id = GOALLIST.length;
+//} else {
+   // LIST = [];
+    //id = 0; 
+//}
 
 
 
 // functions
 
-function loadGoalList(array) {
-    array.forEach(function(item) {
-        addGoal(item.name, item.id, item.done, item.trash); 
-    });
-};
+//function loadGoalList(array) {
+    //array.forEach(function(item) {
+        //addGoal(item.name, item.id, item.done, item.trash); 
+    //});
+//};
 
-function addGoal(goal, id) {
-    const text =                 
-    `<div class='goal1'>
-        <i class='fa ${DONE} complete' job='complete' id='${id}'></i>
+function addGoal(goal, id, done, trash) {
+    if (trash) {
+        { return; }
+    }; 
+
+    const DONE = done ? check : uncheck; 
+    const LINE = done ? line : noline;
+
+    
+    const item =                 
+    `
+    <div class='goal1'>
+        <i class='fa ${DONE}' id='${id}'></i>
         <p class='text ${LINE}'>${goal}</p>
-        <i class='fa fa-trash-o' job='delete' id='${id}'></i>
-    </div>`
+        <i class='fa fa-trash-o deleteIcon' id='${id}'></i>
+    </div>
+    `; 
     
     const position = 'beforeend';
     
-    list.insertAdjacentHTML(position, text);
+    list.insertAdjacentHTML(position, item);
 };
 
+addGoal("drink coffee done", 1, true, false); 
+addGoal("drink coffee undone", 1, false, false); 
+
 function completeGoal(element) {
-    element.classList.toggle(CHECK); 
-    element.classList.toggle(UNCHECK);
-    element.parentNode.querySelector('.text').classList.toggle(LINE_THROUGH); 
+    element.classList.toggle(check); 
+    element.classList.toggle(uncheck);
+    element.parentNode.querySelector('.text').classList.toggle(LINE); 
     GOALLIST[element.id].done = GOALLIST[element.id].done ? false : true; 
 }; 
 
@@ -113,42 +136,32 @@ function removeGoal(element) {
 
 // event listeners 
 
-list.addEventListener('click', function(event) {
-    let element = event.target;
-    const elementJOB = event.target.attributes.job.value; // delete or complete
-    if(elementJOB == 'complete') {
-        completeGoal(element);
-    } else if (elementJOB == 'delete') {
-        removeGoal(element);
-    }
-});
-
 document.addEventListener('keyup', function(event) {
-    const DONE = done ? CHECK : UNCHECK; 
-    const LINE = done ? LINE_THROUGH : '';
-    if (trash) { return; }
-    if (event.key == 13) {
-        const goal = input.value;
+    //const DONE = done ? check : uncheck; 
+    //if (trash) { return; }
+    let goal = ''; 
+    if (event.keyCode == 13) {
+         goal = input.value;
     }
     if (goal) {
-        addGoal(goal, name, id, done, trash); 
+        addGoal(goal, id, false, false); 
         GOALLIST.push(
             {
-                name: goal,
-                id: id,
-                done: false,
-                trash: false
+               name: goal,
+               id: id,
+               done: false,
+               trash: false
             }
         );
+        id++;
+        input.value = '';
     }
-    input.value='';
-    id++;
 });
 
-clear.addEventListner('click', function() {
-    localStorage.clear(); 
-    location.reload(); 
-}); 
+//clear.addEventListener('click', function() {
+    //localStorage.clear(); 
+   // location.reload(); 
+//}); 
 
 // END GOAL LIST CODE
 

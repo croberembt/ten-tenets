@@ -2,7 +2,6 @@ body {
     background-color: black;
 }
 
-
 #navLogoTop {
     width: 100px;
     height: 100px;
@@ -108,4 +107,13 @@ body {
 
 ul {
     list-style-type: none;
-  }
+}
+
+.goalComplete {
+    color: green;
+}
+
+.goalLine {
+    text-decoration: line-through;
+}
+
