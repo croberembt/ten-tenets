@@ -113,6 +113,10 @@ ul {
     color: green;
 }
 
+.goalIncomplete {
+    color: white;
+}
+
 .goalLine {
     text-decoration: line-through;
 }
