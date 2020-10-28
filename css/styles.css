@@ -33,6 +33,7 @@ body {
     height: 100px;
     margin-top: 20px;
     margin-bottom: 50px;
+    margin-left: 65px;
 }
 
 .progress {
@@ -121,3 +122,14 @@ ul {
     text-decoration: line-through;
 }
 
+.add-goal {
+    padding-bottom: 20px;
+}
+
+.clear {
+    margin-bottom: 20px;
+}
+
+#resetIcon {
+    margin-left: 15px;
+}

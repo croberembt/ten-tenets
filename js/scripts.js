@@ -1,23 +1,23 @@
 // START CAROUSEL CODE
 
 $(function() {
-    $(".carousel").carousel(  { interval: 8000 });
-    $("#carouselControl").click(function(){
-        if ($("#carouselControl").children("i").hasClass("fa-pause")) {
-            $(".carousel").carousel("pause");
-            $("#carouselControl").children("i").removeClass("fa-pause");
-            $("#carouselControl").children("i").addClass("fa-play");
+    $('.carousel').carousel(  { interval: 4000 });
+    $('#carouselControl').click(function(){
+        if ($('#carouselControl').children('i').hasClass('fa-pause')) {
+            $('.carousel').carousel('pause');
+            $('#carouselControl').children('i').removeClass('fa-pause');
+            $('#carouselControl').children('i').addClass('fa-play');
         } else {
-            $(".carousel").carousel("cycle");
-            $("#carouselControl").children("i").removeClass("fa-play");
-            $("#carouselControl").children("i").addClass("fa-pause");
+            $('.carousel').carousel('cycle');
+            $('#carouselControl').children('i').removeClass('fa-play');
+            $('#carouselControl').children('i').addClass('fa-pause');
         }
     });
-    $("#reserveButton").click(function(){
-        $("#reserveModal").modal("show");
+    $('#reserveButton').click(function(){
+        $('#reserveModal').modal('show');
     });
-    $("#loginButton").click(function(){
-        $("#loginModal").modal("show");
+    $('#loginButton').click(function(){
+        $('#loginModal').modal('show');
     });
 });
 
@@ -59,7 +59,7 @@ const uncheckColor = 'goalIncomplete';
 
 // local storage
 
-let data = localStorage.getItem("GOAL");
+let data = localStorage.getItem('GOAL');
 
 if (data) {
     GOALLIST = JSON.parse(data);
@@ -89,10 +89,12 @@ function addGoal(goal, id, done, trash) {
     
     const item =                 
     `
-    <div class='goal1'>
-        <i class='fa ${DONE} ${COLOR}' job='complete' id='${id}'></i>
-        <p class='text ${LINE}'>${goal}</p>
-        <i class='fa fa-trash-o' job='delete' id='${id}'></i>
+    <div class='goal container' style='margin-top: 20px'>
+        <div class='row'>
+            <i class='fa ${DONE} ${COLOR}' job='complete' id='${id}'></i>
+            <p class='text ${LINE}'>${goal}</p>
+            <i class='fa fa-trash-o' job='delete' id='${id}'></i>
+        </div>
     </div>
     `; 
     
@@ -132,7 +134,7 @@ document.addEventListener('keyup', function(event) {
                trash: false
             }
         );
-        localStorage.setItem("GOAL", JSON.stringify(GOALLIST)); 
+        localStorage.setItem('GOAL', JSON.stringify(GOALLIST)); 
         id++;
         input1.value = '';
     }
@@ -153,7 +155,7 @@ document.addEventListener('keyup', function(event) {
                trash: false
             }
         );
-        localStorage.setItem("GOAL", JSON.stringify(GOALLIST)); 
+        localStorage.setItem('GOAL', JSON.stringify(GOALLIST)); 
         id++;
         input2.value = '';
     }
@@ -174,7 +176,7 @@ document.addEventListener('keyup', function(event) {
                trash: false
             }
         );
-        localStorage.setItem("GOAL", JSON.stringify(GOALLIST)); 
+        localStorage.setItem('GOAL', JSON.stringify(GOALLIST)); 
         id++;
         input3.value = '';
     }
@@ -195,7 +197,7 @@ document.addEventListener('keyup', function(event) {
                trash: false
             }
         );
-        localStorage.setItem("GOAL", JSON.stringify(GOALLIST)); 
+        localStorage.setItem('GOAL', JSON.stringify(GOALLIST)); 
         id++;
         input4.value = '';
     }
@@ -216,7 +218,7 @@ document.addEventListener('keyup', function(event) {
                trash: false
             }
         );
-        localStorage.setItem("GOAL", JSON.stringify(GOALLIST)); 
+        localStorage.setItem('GOAL', JSON.stringify(GOALLIST)); 
         id++;
         input5.value = '';
     }
@@ -237,7 +239,7 @@ document.addEventListener('keyup', function(event) {
                trash: false
             }
         );
-        localStorage.setItem("GOAL", JSON.stringify(GOALLIST)); 
+        localStorage.setItem('GOAL', JSON.stringify(GOALLIST)); 
         id++;
         input6.value = '';
     }
@@ -258,7 +260,7 @@ document.addEventListener('keyup', function(event) {
                trash: false
             }
         );
-        localStorage.setItem("GOAL", JSON.stringify(GOALLIST)); 
+        localStorage.setItem('GOAL', JSON.stringify(GOALLIST)); 
         id++;
         input7.value = '';
     }
@@ -279,7 +281,7 @@ document.addEventListener('keyup', function(event) {
                trash: false
             }
         );
-        localStorage.setItem("GOAL", JSON.stringify(GOALLIST)); 
+        localStorage.setItem('GOAL', JSON.stringify(GOALLIST)); 
         id++;
         input8.value = '';
     }
@@ -300,7 +302,7 @@ document.addEventListener('keyup', function(event) {
                trash: false
             }
         );
-        localStorage.setItem("GOAL", JSON.stringify(GOALLIST)); 
+        localStorage.setItem('GOAL', JSON.stringify(GOALLIST)); 
         id++;
         input9.value = '';
     }
@@ -321,7 +323,7 @@ document.addEventListener('keyup', function(event) {
                trash: false
             }
         );
-        localStorage.setItem("GOAL", JSON.stringify(GOALLIST)); 
+        localStorage.setItem('GOAL', JSON.stringify(GOALLIST)); 
         id++;
         input10.value = '';
     }
@@ -337,7 +339,7 @@ list.addEventListener('click', function(event) {
     } else if (elementJob == 'delete') {
         removeGoal(element);
     }
-    localStorage.setItem("GOAL", JSON.stringify(GOALLIST)); 
+    localStorage.setItem('GOAL', JSON.stringify(GOALLIST)); 
 });
 
 clear.addEventListener('click', function() {
