@@ -91,9 +91,9 @@ function addGoal(goal, id, done, trash) {
     `
     <div class='goal container' style='margin-top: 20px'>
         <div class='row'>
-            <i class='fa ${DONE} ${COLOR}' job='complete' id='${id}'></i>
+            <i class='fa ${DONE} ${COLOR}' job='complete' id='${id}' style='margin-right: 10px; margin-top: 5px'></i>
             <p class='text ${LINE}'>${goal}</p>
-            <i class='fa fa-trash-o' job='delete' id='${id}'></i>
+            <i class='fa fa-trash-o' job='delete' id='${id}' style='margin-left: 10px; margin-top: 5px'></i>
         </div>
     </div>
     `; 

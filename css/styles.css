@@ -1,113 +1,30 @@
+/* elements */
+
 body {
     background-color: black;
 }
 
-#navLogoTop {
-    width: 100px;
-    height: 100px;
-    margin-top: 10px
+ul {
+    list-style-type: none;
 }
 
-#jumbotronText {
-    margin-top: 30px;
+
+/* classes */
+
+.add-goal {
+    padding-bottom: 20px;
 }
 
-#navLogoBottom {
-    width: 50px;
-    height: 50px;
-}
-
-#loginText {
-    margin-right: 50px;
-    margin-top: 20px;
-}
-
-#copyright {
-    color: white;
-    margin-left: 15px;
-    padding-top: 20px;
-}
-
-#profile {
-    width: 100px;
-    height: 100px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    margin-left: 65px;
-}
-
-.progress {
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-
-#main {
-    font-family: 'Open Sans', sans-serif;
-    color: white;
-}
-
-#thisWeek {
-    margin-top: 30px;
-}
-
-#facebook {
-    margin-right: 30px;
-    margin-top: 200px;
-}
-
-#instagram {
-    margin-right: 30px;
-    margin-top: 200px;
-}
-
-#twitter {
-    margin-top: 200px;
+.carousel {
+    border: solid white; 
 }
 
 .carousel-caption {
     background-color: rgba(0, 0, 0, 0.5); 
 }
-  
-.carousel {
-    border: solid white; 
-}
-  
-#carouselControl {
-    position: absolute;
-    right: 0;
-    bottom: 0; 
-}
 
-#inspiration {
-    color: green;
-    font-weight: bold;
-
-}
-
-#loginButton {
-    color: green;
-    cursor: pointer;
-}
-
-#signUp {
-    margin: 10px;
-}
-
-#cancel {
-    margin: 10px;
-}
-
-#signIn {
-    margin: 10px; 
-}
-
-.jumbotron {
-    background-color: darkgray;
-    color: white;
-}
-
-ul {
-    list-style-type: none;
+.clear {
+    margin-bottom: 20px;
 }
 
 .goalComplete {
@@ -122,14 +39,113 @@ ul {
     text-decoration: line-through;
 }
 
-.add-goal {
-    padding-bottom: 20px;
+.jumbotron {
+    color: white;
+    background-color: transparent;
 }
 
-.clear {
-    margin-bottom: 20px;
+.progress {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+  
+
+/* ids */
+
+#cancel {
+    margin: 10px;
+}
+
+#carouselControl {
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+}
+
+#copyright {
+    color: white;
+    margin-left: 15px;
+    padding-top: 20px;
+}
+
+#facebook {
+    margin-right: 30px;
+    margin-top: 200px;
+}
+
+#inspiration {
+    color: green;
+    font-weight: bold;
+
+}
+
+#instagram {
+    margin-right: 30px;
+    margin-top: 200px;
+}
+
+#loginButton {
+    color: green;
+    cursor: pointer;
+}
+
+#loginText {
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+#jumbotronText {
+    margin-top: 30px;
+}
+
+#main {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+#navLogoBottom {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#navLogoTop {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#profile {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 65px;
 }
 
 #resetIcon {
     margin-left: 15px;
 }
+
+#signIn {
+    margin: 10px; 
+}
+
+#signUp {
+    margin: 10px;
+}
+
+#thisWeek {
+    margin-top: 30px;
+}
+
+#twitter {
+    margin-top: 200px;
+}
+
+
+
+
